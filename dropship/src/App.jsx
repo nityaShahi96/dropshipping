@@ -1,10 +1,14 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <div className="bg-green-400">
-      <input type="text" />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<LoginPage />} />
+    </Routes>
   );
 };
 
