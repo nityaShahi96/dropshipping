@@ -2,6 +2,8 @@ import React from "react";
 import TextField from "@mui/material/TextField";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
+import { Google, Facebook, ShopTwo } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
@@ -65,15 +67,35 @@ const LoginPage = () => {
         </div>
         {/* //Button group */}
         <div className="flex justify-center gap-3 mt-4">
-          <Button variant="contained" href="#contained-buttons">
+          <Button
+            variant="contained"
+            href="#contained-buttons"
+            startIcon={<Google />}
+          >
             Google
           </Button>
-          <Button variant="contained" href="#contained-buttons">
+          <Button
+            variant="contained"
+            href="#contained-buttons"
+            startIcon={<Facebook />}
+          >
             Facebook
           </Button>
-          <Button variant="contained" href="#contained-buttons">
+          <Button
+            variant="contained"
+            href="#contained-buttons"
+            startIcon={<ShopTwo />}
+          >
             Shopify
           </Button>
+        </div>
+        {/* Register if new */}
+        <div className="text-[#8A8A8A] mt-8 flex justify-center gap-1 text-[18px]">
+          New at K-Goods?
+          <Link to="/registration" className="text-blue-500 hover:underline">
+            {" "}
+            Register
+          </Link>
         </div>
       </div>
     </div>
