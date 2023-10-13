@@ -1,14 +1,33 @@
 import React from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import TextField from "@mui/material/TextField";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import GoogleIcon from "@mui/icons-material/Google";
+import ShopTwoIcon from "@mui/icons-material/ShopTwo";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#1976d2", // Replace with your desired primary color
+    },
+    secondary: {
+      main: "#dc004e", // Replace with your desired secondary color
+    },
+  },
+  typography: {
+    fontFamily: "Arial, sans-serif", // Replace with your desired font
+  },
+  // You can further customize other aspects of the theme here
+});
 
 const LoginPage = () => {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   return (
     <div className="m-auto flex flex-col items-center">
       {/* Header */}
-      <div className="text-[64px] font-bold mt-12">K GOODS</div>
+      <div className="text-[64px] font-bold mt-8">K GOODS</div>
       {/* Header two */}
       <div className="text-[36px]">Login to K-Goods</div>
       {/* // Login Form */}
@@ -65,13 +84,25 @@ const LoginPage = () => {
         </div>
         {/* //Button group */}
         <div className="flex justify-center gap-3 mt-4">
-          <Button variant="contained" href="#contained-buttons">
+          <Button
+            variant="contained"
+            href="#contained-buttons"
+            startIcon={<FacebookIcon />}
+          >
             Google
           </Button>
-          <Button variant="contained" href="#contained-buttons">
+          <Button
+            variant="contained"
+            href="#contained-buttons"
+            startIcon={<GoogleIcon />}
+          >
             Facebook
           </Button>
-          <Button variant="contained" href="#contained-buttons">
+          <Button
+            variant="contained"
+            href="#contained-buttons"
+            startIcon={<ShopTwoIcon />}
+          >
             Shopify
           </Button>
         </div>
